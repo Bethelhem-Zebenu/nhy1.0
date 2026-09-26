@@ -1,8 +1,4 @@
-/**
- * Template Name: BizPage
- * Updated: 2026
- * Purpose: Main JavaScript
- */
+
 
 (function () {
   "use strict";
@@ -27,65 +23,7 @@
   document.addEventListener('scroll', toggleScrolled);
 
 
-  /* =========================================================
-     MOBILE NAVIGATION
-  ========================================================= */
-
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-
-  if (mobileNavToggleBtn) {
-
-    function mobileNavToggle() {
-      document.querySelector('body').classList.toggle('mobile-nav-active');
-
-      mobileNavToggleBtn.classList.toggle('bi-list');
-      mobileNavToggleBtn.classList.toggle('bi-x');
-    }
-
-    mobileNavToggleBtn.addEventListener('click', mobileNavToggle);
-  }
-
-
-  /* =========================================================
-     HIDE MOBILE NAV AFTER CLICKING A LINK
-  ========================================================= */
-
-  document.querySelectorAll('.navmenu a').forEach(function (navmenu) {
-
-    navmenu.addEventListener('click', function () {
-
-      if (document.querySelector('.mobile-nav-active')) {
-        document.body.classList.remove('mobile-nav-active');
-
-        if (mobileNavToggleBtn) {
-          mobileNavToggleBtn.classList.add('bi-list');
-          mobileNavToggleBtn.classList.remove('bi-x');
-        }
-      }
-
-    });
-
-  });
-
-
-  /* =========================================================
-     MOBILE DROPDOWN MENUS
-  ========================================================= */
-
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(function (navmenu) {
-
-    navmenu.addEventListener('click', function (e) {
-
-      e.preventDefault();
-
-      navmenu.parentNode.classList.toggle('active');
-      navmenu.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-
-      e.stopImmediatePropagation();
-
-    });
-
-  });
+ 
 
 
   /* =========================================================

@@ -164,19 +164,12 @@ var wow = new WOW({
 wow.init();
 
 
-/**
-* Template Name: BizPage
-* Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 
 (function() {
   "use strict";
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
+  /* Apply .scrolled class to the body as the page is scrolled down
    */
   function toggleScrolled() {
     const selectBody = document.querySelector('body');
@@ -212,17 +205,7 @@ wow.init();
 
   });
 
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
+ 
 
   /**
    * Preloader
